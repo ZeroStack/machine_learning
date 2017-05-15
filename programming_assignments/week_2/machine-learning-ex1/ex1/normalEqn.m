@@ -14,7 +14,9 @@ theta = zeros(size(X, 2), 1);
 
 
 
+% use pinv to account for invertible matrices
 
+theta = pinv(X'*X) * X' * y;
 % -------------------------------------------------------------
 
 
